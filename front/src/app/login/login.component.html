@@ -1,0 +1,39 @@
+<div style="border: solid 1px red;" *ngIf="user">
+  {{user | json}}
+</div>
+<div *ngIf="user">
+  <a href="/api/logout">Logout</a>
+</div>
+
+<div *ngIf="!user">
+  <form>
+    <div><label> User Name : <input type="text" name="username" [(ngModel)]="loginForm.username"/> </label></div>
+    <div><label> Password: <input type="password" name="password" [(ngModel)]="loginForm.password"/> </label></div>
+    <div>
+      <label>Remember Me:</label>
+      <input type="checkbox" name="remember-me" [(ngModel)]="loginForm.remember-me"/>
+    </div>
+    <div>
+      <button (click)="login()">Login</button>
+    </div>
+  </form>
+
+  <form ngNoForm action="/signin/facebook" method="POST">
+    <input type="submit" value="Login using Facebook"/>
+  </form>
+
+  <form ngNoForm action="/signin/twitter" method="POST">
+    <input type="hidden" name="scope" value="include_email"/>
+    <input type="submit" value="Login using Twitter"/>
+  </form>
+
+  <form ngNoForm action="/signin/linkedin" method="POST">
+    <input type="hidden" name="scope" value="r_emailaddress"/>
+    <input type="submit" value="Login using Linkedin"/>
+  </form>
+
+  <form ngNoForm action="/signin/google" method="POST">
+    <input type="hidden" name="scope" value="email"/>
+    <input type="submit" value="Login using Google"/>
+  </form>
+</div>
