@@ -1,0 +1,15 @@
+{
+  "build": {
+    "type": "maven",
+    "target": "package"
+  },
+  "deploy": {
+    "container": "TOMCAT8",
+    "war": [
+      {
+        "file": "api/target/api-1.0-SNAPSHOT.war",
+        "context": "/"
+      }
+    ]
+  }
+}
