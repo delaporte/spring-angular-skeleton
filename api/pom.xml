@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
+        <version>1.5.3.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -24,6 +24,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- use social network for login -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -48,11 +55,6 @@
             <artifactId>spring-social-facebook</artifactId>
             <version>3.0.0.M1</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.social</groupId>
-            <artifactId>spring-social-linkedin</artifactId>
-            <version>2.0.0.M1</version>
-        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
@@ -66,6 +68,16 @@
             <artifactId>prerender-java</artifactId>
             <version>1.6.4</version>
         </dependency>
+
+        <!-- database -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.6</version>
+        </dependency>
+
+
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -89,11 +101,11 @@
     </build>
 
     <repositories>
-    <repository>
-        <id>alfresco</id>
-        <name>alfresco</name>
-        <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
-    </repository>
+        <repository>
+            <id>alfresco</id>
+            <name>alfresco</name>
+            <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+        </repository>
     </repositories>
 
 </project>

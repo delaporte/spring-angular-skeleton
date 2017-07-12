@@ -3,11 +3,12 @@ package net.wismas.spring.skeleton.api.controller;
 import net.wismas.spring.skeleton.api.user.UserEntity;
 import net.wismas.spring.skeleton.api.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by conta on 18/05/2017.
@@ -35,4 +36,5 @@ public class LoginController {
 
         return userRepository.save(userEntity);
     }
+
 }
