@@ -1,4 +1,4 @@
-package net.wismas.spring.skeleton.api.social.google.config;
+package net.wismas.spring.skeleton.api.login.social.google;
 
 
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;

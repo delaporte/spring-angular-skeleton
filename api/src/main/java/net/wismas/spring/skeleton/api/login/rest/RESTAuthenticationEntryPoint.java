@@ -1,4 +1,4 @@
-package net.wismas.spring.skeleton.api.login;
+package net.wismas.spring.skeleton.api.login.rest;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

@@ -1,4 +1,4 @@
-package net.wismas.spring.skeleton.api.login;
+package net.wismas.spring.skeleton.api.login.social;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.social.connect.Connection;

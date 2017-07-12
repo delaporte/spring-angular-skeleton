@@ -1,4 +1,4 @@
-package net.wismas.spring.skeleton.api.login;
+package net.wismas.spring.skeleton.api.login.social;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

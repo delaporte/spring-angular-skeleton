@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {LoginForm} from "./login-form";
+import {LoginForm} from "./login.form";
 import {Http, Headers, RequestOptions} from "@angular/http";
 import {LoginService} from "./login.service";
 /**

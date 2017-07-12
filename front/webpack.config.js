@@ -68,9 +68,14 @@ var defaultConfig = {
     },
     proxy: [
       {
-        context: ['/api', '/signin', 'signup'],
+        context: ['/api', '/signin', '/signup'],
         target: 'http://localhost:8080',
         secure: false
+      },
+      {
+        context: ['/ws'],
+        target: 'ws://localhost:8080',
+        ws: true
       }
     ]
   },

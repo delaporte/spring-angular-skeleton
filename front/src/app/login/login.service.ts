@@ -1,7 +1,8 @@
 import {Injectable} from "@angular/core";
 import {Http, Headers, RequestOptions} from "@angular/http";
-import {LoginForm} from "./login-form";
+import {LoginForm} from "./login.form";
 import "rxjs/add/operator/map";
+import {SignupForm} from "./signup.form";
 /**
  * Created by conta on 18/05/2017.
  */
@@ -29,5 +30,18 @@ export class LoginService {
   getLogin() {
     return this.http.get('/api/login', {})
       .map((res) => res.json());
+  }
+
+  signUp(signUpForm: SignupForm) {
+    console.log('post', signUpForm);
+    let headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+    console.log('headers', headers);
+    let response = this.http.post('/api/login/signup', signUpForm)
+      .map((res) => res.json());
+
+    console.log('response', response);
+    return response;
   }
 }

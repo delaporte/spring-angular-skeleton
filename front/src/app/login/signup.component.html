@@ -1,0 +1,9 @@
+coucou, rentrez vos informations :
+
+<form>
+  <div><label> User Name : <input type="text" name="username" [(ngModel)]="signupForm.login"/> </label></div>
+  <div><label> Password: <input type="password" name="password" [(ngModel)]="signupForm.password"/> </label></div>
+  <div>
+    <button (click)="signUp()">Create account</button>
+  </div>
+</form>
